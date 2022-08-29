@@ -14,52 +14,13 @@
           />
         </a>
       </v-col>
-      <v-col>
-        <a href="https://v2.vuejs.org/" target="_blank">
-          <v-img
-            :src="vueLogo"
-            class="mx-auto logo vue"
-            alt="Vue logo"
-            contain
-            width="200"
-            height="200"
-          />
-        </a>
-      </v-col>
-      <v-col>
-        <a href="https://vuetifyjs.com/" target="_blank">
-          <v-img
-            :src="vuetifyLogo"
-            class="mx-auto logo vuetify"
-            alt="Vuetify logo"
-            contain
-            width="200"
-            height="200"
-          />
-        </a>
-      </v-col>
+
 
       <v-col cols="12">
-        <p v-text="msg" />
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="text-h3 font-weight-bold mb-3">Welcome to Vuetify</h1>
-        <p>
-          Build:
-          <time
-            :datetime="meta.date"
-            v-text="new Date(meta.date).toLocaleString()"
-          />
-        </p>
-        <p class="subheading font-weight-regular">
-          For help and collaboration with other Vuetify developers,
-          <br />
-          please join our online
-          <a href="https://community.vuetifyjs.com" target="_blank">
-            Discord Community
-          </a>
-        </p>
+        <h1 class="text-h3 font-weight-bold mb-3">Mind The Gap</h1>
       </v-col>
 
       <v-col class="mb-5" cols="12">

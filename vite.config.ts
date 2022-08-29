@@ -29,6 +29,7 @@ export default defineConfig(async ({ mode }): Promise<UserConfig> => {
     },
     // https://vitejs.dev/config/server-options.html
     server: {
+      port: 8000,
       fs: {
         // Allow serving files from one level up to the project root
         allow: ['..'],
