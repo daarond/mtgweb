@@ -1,42 +1,6 @@
 <template>
   <v-app>
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-app-bar-title>{{ title }}</v-app-bar-title>
-      <v-spacer />
-      <v-btn icon @click="themeDark = !themeDark">
-        <v-icon>mdi-theme-light-dark</v-icon>
-      </v-btn>
-      <v-progress-linear
-        :active="loading"
-        :indeterminate="progress === null"
-        :value="progress"
-        absolute
-        bottom
-        color="primary accent-3"
-      />
-    </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" app>
-      <v-list link>
-        <v-list-item :to="{ name: 'Home' }">
-          <v-list-item-icon>
-            <v-icon>mdi-home</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>Home</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-        <v-list-item :to="{ name: 'About' }">
-          <v-list-item-icon>
-            <v-icon>mdi-information</v-icon>
-          </v-list-item-icon>
-          <v-list-item-content>
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-    </v-navigation-drawer>
 
     <v-main>
       <v-fade-transition mode="out-in">

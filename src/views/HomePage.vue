@@ -1,6 +1,98 @@
 <template>
   <v-container class="home">
-    <hello-world msg="Welcome to Your Vue.js + TypeScript App" />
+    <div style="float: right;">
+      <v-btn
+        icon
+      >
+        <v-icon>mdi-cog</v-icon>
+      </v-btn>
+    </div>
+
+    <div style="clear: both;">
+      <v-img
+        :src="mtgLogo"
+        class="mx-auto logo"
+        alt="MTG logo"
+        contain
+        width="300"
+        height="300"
+      />
+    </div>
+
+
+    <v-col
+      class="d-flex"
+      cols="12"
+    >
+      <div style="margin-left: 30%;">
+        <v-btn
+          color="orange"
+          dark
+          outlined
+        >
+          How To Play
+        </v-btn>
+      </div>
+    </v-col>
+
+
+    <v-col
+      class="d-flex"
+      cols="12"
+    >
+      <label for="tile_selected">Tiles:</label>
+      <v-select
+        id="tile_selected"
+        :items="tile_options"
+        v-model="tile_selected"
+        label="Outlined style"
+        dense
+        solo
+      ></v-select>
+    </v-col>
+
+    <v-row>
+      <v-col
+        class="d-flex"
+        cols="12"
+      >
+      <div style="margin-left: 30%;">
+        <v-btn
+          color="success"
+          x-large
+          dark
+        >
+          Play Game
+        </v-btn>
+      </div>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="8">
+        <v-btn
+          color="blue"
+          dark
+        >
+          Watch Ad for 250 Coins
+        </v-btn>
+      </v-col>
+      <v-col
+        class="d-flex"
+        cols="2"
+      >
+        <v-btn
+          color="pink"
+          dark
+        >
+          Store
+        </v-btn>
+      </v-col>
+    </v-row>
+
+
+
+
     <teleport to="head">
       <meta
         name="keyword"
@@ -19,14 +111,20 @@ import { defineComponent, ref, watch, type Ref, type SetupContext } from 'vue';
 // import { useStore } from '@logue/vue2-helpers/vuex';
 import { useRoute } from 'vue-router/composables';
 
-import HelloWorld from '@/components/HelloWorld.vue';
+import mtgLogo from '@/assets/mind_the_gap.png';
 
 /** Home Component */
 export default defineComponent({
   /** Components */
   components: {
-    HelloWorld,
+
   },
+
+  data: () => ({
+    tile_options: [ { text:"8: 2 x 4", value: 8 }, { text:"10: 2 x 5", value:10 } ],
+    tile_selected: 8,
+  }),
+
   /** Props */
   props: {
     prop: { type: String, default: 'prop' },
@@ -78,7 +176,8 @@ export default defineComponent({
     return {
       data,
       jsonLd,
+      mtgLogo,
     };
-  },
+  }
 });
 </script>
