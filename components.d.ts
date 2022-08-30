@@ -37,5 +37,6 @@ declare module '@vue/runtime-core' {
     VSelect: typeof import('vuetify/lib')['VSelect']
     VSnackbar: typeof import('vuetify/lib')['VSnackbar']
     VSpacer: typeof import('vuetify/lib')['VSpacer']
+    VSwitch: typeof import('vuetify/lib')['VSwitch']
   }
 }

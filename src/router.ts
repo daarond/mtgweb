@@ -20,14 +20,44 @@ const routes: RouteRecordRaw[] = [
     component: () => import('@/views/HomePage.vue'),
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import('@/views/AboutPage.vue'),
+    path: '/main',
+    name: 'Main',
+    component: () => import('@/views/MainPage.vue'),
   },
   {
-    path: '*',
-    name: 'Error',
-    component: () => import('@/views/ErrorPage.vue'),
+    path: '/settings',
+    name: 'Settings',
+    component: () => import('@/views/SettingsPage.vue'),
+  },
+  {
+    path: '/store',
+    name: 'Store',
+    component: () => import('@/views/StorePage.vue'),
+  },
+  {
+    path: '/ad',
+    name: 'Ad',
+    component: () => import('@/views/AdPage.vue'),
+  },
+  {
+    path: '/pause',
+    name: 'Pause',
+    component: () => import('@/views/PausePage.vue'),
+  },
+  {
+    path: '/help',
+    name: 'Help',
+    component: () => import('@/views/HelpPage.vue'),
+  },
+  {
+    path: '/win',
+    name: 'Win',
+    component: () => import('@/views/WinPage.vue'),
+  },
+  {
+    path: '/lose',
+    name: 'Lose',
+    component: () => import('@/views/LossPage.vue'),
   },
 ];
 

@@ -3,6 +3,7 @@
     <div style="float: right;">
       <v-btn
         icon
+        to="Settings"
       >
         <v-icon>mdi-cog</v-icon>
       </v-btn>
@@ -29,6 +30,7 @@
           color="orange"
           dark
           outlined
+          to="Help"
         >
           How To Play
         </v-btn>
@@ -36,20 +38,29 @@
     </v-col>
 
 
-    <v-col
-      class="d-flex"
-      cols="12"
-    >
-      <label for="tile_selected">Tiles:</label>
-      <v-select
-        id="tile_selected"
-        :items="tile_options"
-        v-model="tile_selected"
-        label="Outlined style"
-        dense
-        solo
-      ></v-select>
-    </v-col>
+    <v-row>
+      <v-col
+        class="hidden-sm-and-down"
+        cols="3"
+      ></v-col>
+      <v-col
+        class="hidden-sm-and-up"
+        cols="2"
+      ></v-col>
+      <v-col
+        class="d-flex"
+        cols="8"
+      >
+        <v-select
+          id="tile_selected"
+          :items="tile_options"
+          v-model="tile_selected"
+          label="Tile Count"
+          dense
+          outlined
+        ></v-select>
+      </v-col>
+    </v-row>
 
     <v-row>
       <v-col
@@ -61,6 +72,7 @@
           color="success"
           x-large
           dark
+          to="Main"
         >
           Play Game
         </v-btn>
@@ -73,6 +85,7 @@
         <v-btn
           color="blue"
           dark
+          to="Ad"
         >
           Watch Ad for 250 Coins
         </v-btn>
@@ -84,6 +97,7 @@
         <v-btn
           color="pink"
           dark
+          to="Store"
         >
           Store
         </v-btn>
