@@ -1,8 +1,11 @@
 <template>
-  <v-container class="home">
+  <v-container class="home"
+               :style="{ backgroundImage: 'url(' + require('@/assets/subway_wall.jpg') + ')' }"
+  >
     <div style="float: right;">
       <v-btn
-        icon
+        fab
+        color="white"
         to="Settings"
       >
         <v-icon>mdi-cog</v-icon>
@@ -29,7 +32,6 @@
         <v-btn
           color="orange"
           dark
-          outlined
           to="Help"
         >
           How To Play
@@ -57,7 +59,7 @@
           v-model="tile_count_selected"
           label="Tile Count"
           dense
-          outlined
+          solo
         ></v-select>
       </v-col>
     </v-row>
@@ -104,7 +106,7 @@
       </v-col>
     </v-row>
 
-
+    <v-row style="height: 500px;"></v-row>
 
 
     <teleport to="head">
@@ -195,3 +197,4 @@ export default defineComponent({
   }
 });
 </script>
+

@@ -1,5 +1,7 @@
 <template>
-  <v-container class="win">
+  <v-container class="win"
+               :style="{ backgroundImage: 'url(' + require('@/assets/win.jpg') + ')' }"
+  >
     <h1>You Won!</h1>
 
     <v-row style="height: 80px;"></v-row>
@@ -15,7 +17,7 @@
       </v-btn>
     </v-row>
 
-    <v-row style="height: 80px;"></v-row>
+    <v-row style="height: 500px;"></v-row>
 
     <v-row>
       <v-btn
@@ -29,6 +31,8 @@
         <v-icon>mdi-home</v-icon>
       </v-btn>
     </v-row>
+
+
 
   </v-container>
 </template>

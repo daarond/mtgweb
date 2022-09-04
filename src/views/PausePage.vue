@@ -1,8 +1,11 @@
 <template>
-  <v-container class="settings">
+  <v-container class="settings"
+               :style="{ backgroundImage: 'url(' + require('@/assets/doors.jpg') + ')' }"
+  >
+    <v-row style="height: 50px;"></v-row>
     <h1>PAUSED</h1>
 
-    <v-row style="height: 80px;"></v-row>
+    <v-row style="height: 100px;"></v-row>
 
     <v-row>
       <v-btn
@@ -17,7 +20,7 @@
       </v-btn>
     </v-row>
 
-    <v-row style="height: 80px;"></v-row>
+    <v-row style="height: 100px;"></v-row>
 
     <v-row>
       <v-btn
@@ -31,7 +34,7 @@
       </v-btn>
     </v-row>
 
-    <v-row style="height: 80px;"></v-row>
+    <v-row style="height: 100px;"></v-row>
 
     <v-row>
       <v-btn
@@ -45,6 +48,9 @@
         <v-icon>mdi-home</v-icon>
       </v-btn>
     </v-row>
+
+    <v-row style="height: 800px;"></v-row>
+
   </v-container>
 </template>
 

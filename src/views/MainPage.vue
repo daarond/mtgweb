@@ -1,9 +1,12 @@
 <template>
-  <v-container class="main" style="height: 90%;">
+  <v-container class="main" style="height: 90%;"
+               :style="{ backgroundImage: 'url(' + require('@/assets/train1.jpg') + ')' }"
+  >
     <v-row>
       <v-col cols="4">
         <v-btn
           icon
+          dark
           @click="goHome"
         >
           <v-icon>mdi-home</v-icon>
@@ -12,6 +15,7 @@
       <v-col cols="4">
         <v-btn
           icon
+          dark
           to="Store"
         >
           <v-icon>mdi-bitcoin</v-icon>
@@ -19,12 +23,12 @@
         </v-btn>
       </v-col>
       <v-col cols="4">
-        <div style="margin-top: 5px;">Level {{ level }}</div>
+        <div style="margin-top: 5px; color:white;">Level {{ level }}</div>
       </v-col>
     </v-row>
 
     <v-row>
-      <v-col cols="5"><span style="font-size: x-large;">{{ round }} of {{ total_rounds }}</span></v-col>
+      <v-col cols="5"><span style="font-size: x-large; color: white;">{{ round }} of {{ total_rounds }}</span></v-col>
       <v-col cols="3"><span style="font-size: xx-large; color:red; font-weight: bold;">{{ minutes + ":" + seconds }}</span></v-col>
       <v-col cols="2"><v-btn color="red" dark @click="buyTime">Buy Time</v-btn></v-col>
     </v-row>
@@ -44,10 +48,10 @@
 
     <v-row style="margin-top: 10px;"></v-row>
     <v-row style="margin-left: 10%;">
-      <div style="font-size: xxx-large; text-transform: uppercase;" v-html="find_word"></div>
+      <div style="font-size: xxx-large; text-transform: uppercase; color: white;" v-html="find_word"></div>
     </v-row>
     <v-row style="margin-left: 10%;" v-for="c in completed_list">
-      <div style="font-size: x-large; text-transform: uppercase;" v-html="c"></div>
+      <div style="font-size: x-large; text-transform: uppercase; color: white;" v-html="c"></div>
     </v-row>
 
     <v-row>
@@ -59,7 +63,7 @@
         bottom
         right
         fixed
-        to="Pause"
+        @click="pauseGame"
       >
         <v-icon>mdi-pause</v-icon>
       </v-btn>
@@ -80,6 +84,9 @@ export default defineComponent({
   },
 
   mounted() {
+    // set the letter list
+    // get a new word
+
     this.showLetters();
 
     setTimeout(this.startTimer, 5000);
@@ -109,6 +116,13 @@ export default defineComponent({
           this.loseRound();
         }
       }, 1000);
+    },
+
+    pauseGame: function()
+    {
+      // because this switches windows, we lose the time
+      clearInterval(this.countdown_timer_handle);
+      this.$router.push('/pause');
     },
 
     goHome: function()

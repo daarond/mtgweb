@@ -1,8 +1,9 @@
 <template>
-  <v-container class="loss">
-    <h1>You Lose</h1>
+  <v-container class="loss"
+               :style="{ backgroundImage: 'url(' + require('@/assets/down_stairs.jpg') + ')' }"
+    >
 
-    <v-row style="height: 80px;"></v-row>
+    <v-row style="height: 300px;"></v-row>
 
     <v-row>
       <v-btn
@@ -30,6 +31,8 @@
         <v-icon>mdi-home</v-icon>
       </v-btn>
     </v-row>
+
+    <v-row style="height: 500px;"></v-row>
 
   </v-container>
 </template>
