@@ -2,6 +2,8 @@
   <v-container class="loss">
     <h1>You Lose</h1>
 
+    <v-row style="height: 80px;"></v-row>
+
     <v-row>
       <v-btn
         color="yellow"

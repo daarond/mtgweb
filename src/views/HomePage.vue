@@ -52,9 +52,9 @@
         cols="8"
       >
         <v-select
-          id="tile_selected"
+          id="tile_count_selected"
           :items="tile_options"
-          v-model="tile_selected"
+          v-model="tile_count_selected"
           label="Tile Count"
           dense
           outlined
@@ -136,7 +136,7 @@ export default defineComponent({
 
   data: () => ({
     tile_options: [ { text:"8: 2 x 4", value: 8 }, { text:"10: 2 x 5", value:10 } ],
-    tile_selected: 8,
+    tile_count_selected: 8,
   }),
 
   /** Props */
