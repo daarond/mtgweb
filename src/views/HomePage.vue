@@ -1,6 +1,6 @@
 <template>
   <v-container class="home"
-               :style="{ backgroundImage: 'url(' + require('@/assets/subway_wall.jpg') + ')' }"
+               :style="{ backgroundImage: 'url(' + require('@/assets/subway_floor.jpg') + ')' }"
   >
     <div style="float: right;">
       <v-btn
